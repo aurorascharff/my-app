@@ -1,10 +1,10 @@
 export default async function Page({
   searchParams,
 }: {
-  searchParams: Promise<{ id: string }>;
+  searchParams: Promise<{ q: string }>;
 }) {
-  const { id } = await searchParams;
+  const { q } = await searchParams;
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
-  return <p>Post {id}</p>;
+  return <p>Query: {q}</p>;
 }
