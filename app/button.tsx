@@ -7,5 +7,5 @@ export default function Button({ id }: { id: number }) {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const router = useRouter();
 
-  return <button onClick={() => router.push(`post/?id=${id}`)}>Go {id}</button>;
+  return <button onClick={() => router.push(`/post?id=${id}`)}>Go {id}</button>;
 }
